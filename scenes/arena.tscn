@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dwvaofrf8x4ai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mixm"]
+size = Vector2(967, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kh1c2"]
+size = Vector2(963, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xv1dj"]
+size = Vector2(25, 531)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6y33b"]
+size = Vector2(25, 527)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7xit"]
+size = Vector2(150, 100)
+
+[node name="Arena" type="Node2D" unique_id=691717121]
+metadata/_edit_vertical_guides_ = [960.0, -99.0]
+metadata/_edit_horizontal_guides_ = [453.0, 537.0, 25.0, 149.0]
+
+[node name="Floor" type="Polygon2D" parent="." unique_id=14263565]
+position = Vector2(0, -6)
+color = Color(0.14333999, 0.14333999, 0.14333999, 1)
+polygon = PackedVector2Array(-8, -2, 959, 0, 961, 533, -6, 535)
+
+[node name="WallTop" type="StaticBody2D" parent="." unique_id=445287616]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop" unique_id=1830195049]
+position = Vector2(480, 10)
+shape = SubResource("RectangleShape2D_4mixm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1028738358]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=233563016]
+position = Vector2(480, 520.5)
+shape = SubResource("RectangleShape2D_kh1c2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1115536659]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1371677235]
+position = Vector2(6.5, 270)
+shape = SubResource("RectangleShape2D_xv1dj")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1910470004]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1841060232]
+position = Vector2(948.5, 263.5)
+shape = SubResource("RectangleShape2D_6y33b")
+
+[node name="Corousel" type="StaticBody2D" parent="." unique_id=673608107]
+position = Vector2(480, 270)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corousel" unique_id=1604982088]
+shape = SubResource("RectangleShape2D_b7xit")
