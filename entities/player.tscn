@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bwnnbktyabf7"]
+
+[ext_resource type="Script" uid="uid://kqqt222ioxtb" path="res://scripts/player.gd" id="1_merdl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4mixm"]
+radius = 12.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1659949079 groups=["player"]]
+visibility_layer = 2
+motion_mode = 1
+script = ExtResource("1_merdl")
+metadata/_edit_horizontal_guides_ = [-24.0]
+metadata/_edit_vertical_guides_ = [-24.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633534268]
+shape = SubResource("CircleShape2D_4mixm")
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=484441651]
+position = Vector2(12, 12)
+color = Color(0.5884746, 0.6591657, 0.4995277, 1)
+polygon = PackedVector2Array(-24, -24, 0, -24, 0, -1, -24, -1, -24, -22)
+
+[node name="DamageCooldown" type="Timer" parent="." unique_id=1276359844]
+wait_time = 0.8
+one_shot = true

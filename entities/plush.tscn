@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bbe163edgp18j"]
+
+[ext_resource type="Script" uid="uid://cp40a288vkc3f" path="res://scripts/plush.gd" id="1_qp8y5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4mixm"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kh1c2"]
+radius = 22.0
+
+[node name="Plush" type="CharacterBody2D" unique_id=1955940445]
+visibility_layer = 4
+motion_mode = 1
+script = ExtResource("1_qp8y5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=926650061]
+shape = SubResource("CircleShape2D_4mixm")
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=1813363557]
+position = Vector2(2, 10)
+color = Color(0.6448325, 0.49033564, 0.7056211, 1)
+polygon = PackedVector2Array(-15, -21, 11, -21, 11, 0, -15, 0)
+
+[node name="ContactArea" type="Area2D" parent="." unique_id=333065418]
+light_mask = 2
+visibility_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ContactArea" unique_id=933467251]
+light_mask = 2
+visibility_layer = 0
+shape = SubResource("CircleShape2D_kh1c2")
