@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="SpriteFrames" path="res://Kit_Ultima_Volta/godot/bear_frames.tres" id="1"]
+
+[node name="BearPreview" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 120)
+texture_filter = 1
+sprite_frames = ExtResource("1")
+animation = &"walk_right"
+autoplay = "walk_right"
+scale = Vector2(3, 3)

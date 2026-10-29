@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://3jp218nef6ri"]
+
+[ext_resource type="Script" uid="uid://cgfgjuqi0qajt" path="res://scripts/exit.gd" id="1_fqdey"]
+[ext_resource type="Texture2D" uid="uid://cqnn58lhbq4qk" path="res://Kit_Ultima_Volta/sprites/props/exit_closed.png" id="2_3kl31"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mixm"]
+size = Vector2(100, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kh1c2"]
+size = Vector2(120, 65)
+
+[node name="Exit" type="Node2D" unique_id=2073044792]
+script = ExtResource("1_fqdey")
+
+[node name="Blocker" type="StaticBody2D" parent="." unique_id=1241187522]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=1213976971]
+shape = SubResource("RectangleShape2D_4mixm")
+
+[node name="Placeholder" type="Polygon2D" parent="." unique_id=2029424217]
+visible = false
+
+[node name="Trigger" type="Area2D" parent="." unique_id=259695930]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=649238622]
+light_mask = 2
+visibility_layer = 0
+shape = SubResource("RectangleShape2D_kh1c2")
+
+[node name="Visual" type="Node2D" parent="." unique_id=1597304521]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visual" unique_id=1530892793]
+z_index = 2
+texture = ExtResource("2_3kl31")
