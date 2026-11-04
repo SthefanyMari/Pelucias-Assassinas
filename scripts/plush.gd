@@ -25,18 +25,27 @@ func _ready() -> void:
 	$PathTimer.timeout.connect(update_target)
 	play_animation("idle")
 
-	await get_tree().physics_frame
+	var tree := get_tree()
 
-	while NavigationServer2D.map_get_iteration_id(
-		agent.get_navigation_map()
-	) == 0:
-		await get_tree().physics_frame
+	while is_inside_tree():
+		await tree.physics_frame
 
-	nav_ready = true
-	update_target()
-	$PathTimer.start()
+		if not is_inside_tree():
+			return
 
+		var navigation_map: RID = agent.get_navigation_map()
 
+		if not navigation_map.is_valid():
+			continue
+
+		if NavigationServer2D.map_get_iteration_id(navigation_map) == 0:
+			continue
+
+		nav_ready = true
+		update_target()
+		$PathTimer.start()
+		return
+		
 func update_target() -> void:
 	if nav_ready and is_instance_valid(player):
 		agent.target_position = player.global_position

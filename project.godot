@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Pelúcias Assassinas"
-run/main_scene="uid://dwvaofrf8x4ai"
+run/main_scene="uid://dspe4kk6oqady"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameSession="*uid://1knx40qo8n4p"
 
 [display]
 

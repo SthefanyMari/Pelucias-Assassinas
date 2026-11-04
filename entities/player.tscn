@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwnnbktyabf7"]
 
 [ext_resource type="Script" uid="uid://kqqt222ioxtb" path="res://scripts/player.gd" id="1_merdl"]
-[ext_resource type="SpriteFrames" path="res://Kit_Ultima_Volta/godot/player_frames.tres" id="2_b0kkn"]
+[ext_resource type="SpriteFrames" uid="uid://dve3x7duc7ubf" path="res://Kit_Ultima_Volta/godot/player_frames.tres" id="2_b0kkn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4mixm"]
 radius = 12.0
@@ -17,10 +17,11 @@ metadata/_edit_horizontal_guides_ = [-24.0]
 metadata/_edit_vertical_guides_ = [-24.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=320885892]
+z_index = 3
 position = Vector2(0, -8)
 sprite_frames = ExtResource("2_b0kkn")
 animation = &"walk_down"
-frame_progress = 0.14154774
+frame_progress = 0.74649394
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633534268]
 shape = SubResource("CircleShape2D_4mixm")
@@ -29,7 +30,8 @@ shape = SubResource("CircleShape2D_4mixm")
 visible = false
 position = Vector2(12, 12)
 color = Color(0.5884746, 0.6591657, 0.4995277, 1)
-polygon = PackedVector2Array(-24, -24, 0, -24, 0, -1, -24, -1, -24, -22)
+polygon = PackedVector2Array(-456.8, -50.799995)
+uv = PackedVector2Array(-456.8, -50.799995)
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=995465807]
 light_mask = 4
