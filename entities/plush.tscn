@@ -11,6 +11,8 @@ radius = 22.0
 
 [node name="Plush" type="CharacterBody2D" unique_id=1955940445 groups=["enemies"]]
 visibility_layer = 4
+collision_layer = 4
+collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_qp8y5")
 
@@ -27,6 +29,8 @@ polygon = PackedVector2Array(-15, -21, 11, -21, 11, 0, -15, 0)
 [node name="ContactArea" type="Area2D" parent="." unique_id=333065418]
 light_mask = 2
 visibility_layer = 0
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ContactArea" unique_id=933467251]
 light_mask = 2
